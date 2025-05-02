@@ -11,8 +11,8 @@ html, body {
   font-weight: 500;
   font-size: 16px;
   font-family: 'Poppins', arial;
-  overflow: auto; /* fallback */
-  overflow: overlay;
+  overflow: hidden;
+  scrollbar-gutter: stable;
 }
 
 .input-sentences {
