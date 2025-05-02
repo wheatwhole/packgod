@@ -12,9 +12,11 @@ html, body {
   font-size: 16px;
   font-family: 'Poppins', arial;
   overflow: hidden;
-  scrollbar-gutter: stable;
 }
 
+html {
+  overflow-y: scroll;
+}
 .input-sentences {
   border:none;
   background-image:none;
