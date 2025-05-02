@@ -11,8 +11,8 @@ html, body {
   font-weight: 500;
   font-size: 16px;
   font-family: 'Poppins', arial;
-  overflow-y: auto; /* or 'hidden' */
-  overflow-x: hidden;
+  overflow: auto; /* fallback */
+  overflow: overlay;
 }
 
 .input-sentences {
@@ -47,6 +47,8 @@ input[type=number]::-webkit-outer-spin-button  {
   position: relative;
   height: 100%;
   margin: auto;
+  overflow: auto; /* fallback */
+  overflow: overlay;
   max-width: 900px;
   display: flex;
   flex-direction: column;
