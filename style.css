@@ -1,4 +1,5 @@
-
+@import "tailwindcss";
+ 
 /* Update the html, body CSS rule */
 html, body {
   width: 100%;

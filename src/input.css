@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main: #40D672; 
+}
+
+/* Update the html, body CSS rule */
+html, body {
+  width: 100%;
+  background: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'Poppins', arial;
+  overflow-y: auto; /* or 'hidden' */
+  overflow-x: hidden;
+}
+
+.input-sentences {
+  border:none;
+  background-image:none;
+  border-radius: 0.5em;
+  background-color:transparent;
+  padding: 20px;
+  line-height: 21px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button  {
+  visibility: hidden;
+}
+
+.input-sentences:focus {
+    outline: none;
+}
+
+.no-transition {
+  transition: none !important;
+  animation: none;
+}
+
+.shown {
+    animation: 0.7s ease-out 0s 1 slideInFromTop;
+}
+
+/* Adjust the .hero-wrapper CSS rule */
+.allwrapper {
+  position: relative;
+  height: 100%;
+  margin: auto auto;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+  padding-left: 15px;
+  gap: 15px;
+}
+
+
+.text {
+  font-size: 16px;
+  width: 90%;
+  height: fit-content;
+}
+
+.title {
+  color: #4E3636;
+  text-align: left;
+  font-size: 2em;
+  width: 100%;
+}
+.boxed {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.image-wrap {
+  width: 20em;
+  height: 20em;
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin: auto;
+}
+
+
+.left, .right {
+    display: block;
+    position: relative;
+    clear: both;
+}
+
+.roast {
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  right: 0%;
+  width: fit-content;
+}
+
+.left {
+  margin-left: 10px;
+  float: left;
+}
+
+.right {
+  margin-right: 10px;
+  float: right;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Montserrat:ital,wght@0,600;1,500&family=Poppins:wght@200;300;400;500&family=Raleway:wght@600;700&display=swap');
+
+ul {
+  list-style: none;
+}
+
+.shortened {
+  width: 40%;
+}
+
+p {
+  text-align: justify;
+  color: #1e272e;
+}
+
+.desc {
+  color: #4E3636;
+  font-weight: 400;
+  font-size: 0.95em;
+  
+}
+
+.light {
+  opacity: 0.7;
+}
+.center {
+  display: block;
+  margin: auto;
+}
+
+
+
+.absolute {
+  position: absolute;
+}
+
+.fixedbuttons {
+  bottom: 10px;
+  font-weight: 500;
+  width: fit-content;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+
+.suggest {
+  background-color: rgba(255, 255, 255, .5);  
+  backdrop-filter: blur(2px);
+  transition: ease 0.2s all;
+  float: right;
+  margin-left: 10px;
+  border-radius: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  color: #333333;
+}
+
+.seafarer-box-shadow {
+   box-shadow: rgba(93, 140, 192, 0.25) 0px 3px 2px, rgba(93, 140, 192, 0.24) 0px 7px 13px -3px, rgba(33, 42, 62, 0.2) 0px -3px 0px inset;
+ /* old seafarer box shadow: */
+ /* box-shadow: 0px 3px 2px rgba(93, 140, 192, 0.25), rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+ /* filter: drop-shadow(0px 3px 3px rgba(93, 140, 192, 0.25)); */
+}
+
+.button {
+  box-sizing: border-box;
+  font-size: 14.5px;
+  padding: 10px;
+  background-color: #FFFFFF;
+	color: var(--accent);
+	border: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	cursor: pointer;
+	outline: inherit;
+  border-radius: 0.2em;
+  max-width: 300px;
+  width: 200px;
+  height: 32px;
+  min-width: fit-content;
+  transition: ease 0.2s;
+  margin: 5px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settingsnstuff {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}

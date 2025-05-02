@@ -1,0 +1,23 @@
+{
+  "name": "packgod",
+  "version": "1.0.0",
+  "description": "Repository for a packgod roast generator im developing",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wheatwhole/packgod.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wheatwhole/packgod/issues"
+  },
+  "homepage": "https://github.com/wheatwhole/packgod#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.5",
+    "tailwindcss": "^4.1.5"
+  }
+}
