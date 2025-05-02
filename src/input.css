@@ -53,6 +53,7 @@ input[type=number]::-webkit-outer-spin-button  {
   padding-right: 30px;
   padding-left: 15px;
   gap: 15px;
+  width: 90%;
 }
 
 
