@@ -8,8 +8,8 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
-    --text-lg: 1.125rem;
-    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-bold: 700;
@@ -179,8 +179,8 @@
   .h-auto {
     height: auto;
   }
-  .w-11\/12 {
-    width: calc(11/12 * 100%);
+  .w-1\/1 {
+    width: calc(1/1 * 100%);
   }
   .w-80 {
     width: calc(var(--spacing) * 80);
@@ -218,6 +218,11 @@
     --tw-shadow: var(--tw-shadow-color, rgba(0, 0, 0, 0.05)) 0px 6px 24px 0px, var(--tw-shadow-color, rgba(0, 0, 0, 0.08)) 0px 0px 0px 1px;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .lg\:flex-nowrap {
+    @media (width >= 64rem) {
+      flex-wrap: nowrap;
+    }
+  }
 }
 html, body {
   width: 100%;
@@ -226,17 +231,18 @@ html, body {
   font-size: 16px;
   font-family: 'Poppins', arial;
   color: #1e272e;
+  overflow-y: scroll;
 }
 .textbox {
   height: calc(var(--spacing) * 40);
   width: calc(1/1 * 100%);
-  max-width: 500px;
+  max-width: calc(9/10 * 100%);
   border-radius: var(--radius-lg);
   --tw-border-style: none;
   border-style: none;
-  padding: calc(var(--spacing) * 5);
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
+  padding: calc(var(--spacing) * 7);
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-leading: calc(var(--spacing) * 5);
   line-height: calc(var(--spacing) * 5);
   --tw-shadow: var(--tw-shadow-color, rgba(0, 0, 0, 0.05)) 0px 6px 24px 0px, var(--tw-shadow-color, rgba(0, 0, 0, 0.08)) 0px 0px 0px 1px;
@@ -247,10 +253,10 @@ html, body {
     height: 20rem;
   }
   @media (width >= 64rem) {
-    height: 30rem;
+    height: 25rem;
   }
   @media (width >= 64rem) {
-    max-width: 500px;
+    max-width: calc(9/20 * 100%);
   }
 }
 .no-transition {
