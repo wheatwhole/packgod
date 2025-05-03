@@ -2,6 +2,7 @@
 
 @theme {
   --color-main: #40D672; 
+  --shadow-main: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 /* Update the html, body CSS rule */
@@ -11,28 +12,11 @@ html, body {
   font-weight: 500;
   font-size: 16px;
   font-family: 'Poppins', arial;
-  overflow: hidden;
+  color: #1e272e;
 }
 
-html {
-  overflow-y: scroll;
-}
-.input-sentences {
-  border:none;
-  background-image:none;
-  border-radius: 0.5em;
-  background-color:transparent;
-  padding: 20px;
-  line-height: 21px;
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button  {
-  visibility: hidden;
-}
-
-.input-sentences:focus {
-    outline: none;
+.textbox {
+  @apply shadow-main border-none w-1/1 max-w-[500px] lg:max-w-[500px] h-40 lg:h-[30rem] md:h-[20rem] p-5 leading-5 outline-none rounded-lg text-lg;
 }
 
 .no-transition {
@@ -44,20 +28,16 @@ input[type=number]::-webkit-outer-spin-button  {
     animation: 0.7s ease-out 0s 1 slideInFromTop;
 }
 
-/* Adjust the .hero-wrapper CSS rule */
 .allwrapper {
   position: relative;
   height: 100%;
-  margin: auto;
-  overflow: auto; /* fallback */
-  overflow: overlay;
   max-width: 900px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 90%;
+  margin: auto auto
 }
-
 
 .text {
   font-size: 16px;
