@@ -18,21 +18,22 @@
          </div>
          <div id="generator" class="justify-center w-1/1 gap-5 mx-auto flex flex-row lg:flex-nowrap flex-wrap mt-10 ">
            
-            <div class="textbox-wrapper"><textarea placeholder="Describe your opponent in as much detail as possible" class="textbox"></textarea></div>
-         <!-- <div role="button" class="seafarer-box-shadow button" tabindex="1" style="cursor: pointer;" onclick="start()">click to generate</div>
-            <div role="button" class="boxed suggest button seafarer-box-shadow" tabindex="1" style="cursor: pointer;" data-tf-position="right" data-tf-opacity="100" data-tf-iframe-props="title=first typeform" data-tf-transitive-search-params data-tf-medium="snippet" data-tf-slider="YXFCZ8bg">suggest a roast!</div> -->
+            <div class="textbox-wrapper"><textarea placeholder="Describe your opponent in as much detail as possible" id="user_description" class="textbox"></textarea></div>
+            <div role="button" class="seafarer-box-shadow button" tabindex="1" style="cursor: pointer;" onclick="start()">click to generate</div>
             <div class="textbox-wrapper">
                <p id="starter"><b>Result:</b></p>
-             <span id="result"></p>
+               <div id="result">erm</div>
             </div>
          </div>
          
       </div>
-      <script src="script.js"></script>
-      <script src="//embed.typeform.com/next/embed.js"></script>
-      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+     
       <style lang="postcss" scoped>
          
       </style>
    </body>
+   <script src="generation.js"></script>
+   <script src="training.js"></script>
+   <script src="//embed.typeform.com/next/embed.js"></script>
+   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
 </html>
