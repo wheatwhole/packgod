@@ -12,6 +12,7 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --default-font-family: var(--font-sans);
@@ -231,9 +232,12 @@ html, body {
   font-size: 16px;
   font-family: 'Poppins', arial;
   color: #1e272e;
-  overflow-y: scroll;
 }
-.textbox {
+::-webkit-scrollbar-track {
+  display: none;
+  border-radius: 10px;
+}
+.textbox-wrapper {
   height: calc(var(--spacing) * 40);
   width: calc(1/1 * 100%);
   max-width: calc(9/10 * 100%);
@@ -258,6 +262,24 @@ html, body {
   @media (width >= 64rem) {
     max-width: calc(9/20 * 100%);
   }
+}
+.textbox {
+  margin: calc(var(--spacing) * 0);
+  height: 100%;
+  width: 100%;
+  resize: none;
+  --tw-border-style: none;
+  border-style: none;
+  background-color: transparent;
+  padding: calc(var(--spacing) * 0);
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+  --tw-leading: calc(var(--spacing) * 5);
+  line-height: calc(var(--spacing) * 5);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  --tw-outline-style: none;
+  outline-style: none;
 }
 .no-transition {
   transition: none !important;

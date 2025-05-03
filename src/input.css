@@ -13,11 +13,17 @@ html, body {
   font-size: 16px;
   font-family: 'Poppins', arial;
   color: #1e272e;
-  overflow-y: scroll;
+}
+::-webkit-scrollbar-track {
+  display: none;
+  border-radius: 10px;
+}
+.textbox-wrapper {
+  @apply shadow-main border-none w-1/1 max-w-9/10 lg:max-w-9/20 h-40 lg:h-[25rem] md:h-[20rem] p-7 leading-5 outline-none rounded-lg text-xl;
 }
 
 .textbox {
-  @apply shadow-main border-none w-1/1 max-w-9/10 lg:max-w-9/20 h-40 lg:h-[25rem] md:h-[20rem] p-7 leading-5 outline-none rounded-lg text-xl;
+  @apply border-none outline-none resize-none w-full h-full p-0 m-0 bg-transparent text-xl font-normal leading-5;
 }
 
 .no-transition {
