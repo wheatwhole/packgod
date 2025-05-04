@@ -83,6 +83,12 @@ async function start() {
   ]; 
   outputDiv.textContent = "loading and packing..."
 
+  function delayedFunction() {
+     outputDiv.textContent = "pls be patient..."
+  }
+  
+  setTimeout(delayedFunction, 4000); //im gonna be honest i got the delayed part off google AI
+
   roast = await postChatCompletion(chatMessages, { model: "openai-large", seed: 500 });
   outputDiv.textContent = roast
 
