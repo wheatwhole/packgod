@@ -41,13 +41,13 @@ async function postChatCompletion(messages, options = {}) {
     const result = await response.json();
     console.log("Assistant:", result.choices[0].message.content);
     // console.log("Full response:", result);
-    return result; // Return the full response object
+    return result.choices[0].message.content; // Return the full response object
   } catch (error) {
     console.error("Error posting chat completion:", error);
   }
 }
 
-function start() {
+async function start() {
   console.log("start");
 
   const system = window.system;
@@ -63,7 +63,7 @@ function start() {
   var outputDiv,
     element2 = document.getElementById("output");
   if (element != null) {
-    outputDiv = element.value;
+    outputDiv = element2
   } else {
     outputDiv = null;
   }
@@ -81,14 +81,7 @@ function start() {
     },
   ]; 
   
-  postChatCompletion(chatMessages, { model: "openai-large", seed: 500 });
+  roast = await postChatCompletion(chatMessages, { model: "openai-large", seed: 500 });
+  outputDiv.textContent = roast
 
-  /* console.log(
-    postChatCompletion(chatMessages, { model: "mistral", seed: 500 })
-  );
-
-  outputDiv.textContent = postChatCompletion(chatMessages, {
-    model: "mistral",
-    seed: 500,
-  }); */ 
 }
