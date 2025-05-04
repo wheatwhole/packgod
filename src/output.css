@@ -285,8 +285,8 @@ html, body {
   padding: calc(var(--spacing) * 0);
   font-size: var(--text-xl);
   line-height: var(--tw-leading, var(--text-xl--line-height));
-  --tw-leading: calc(var(--spacing) * 5);
-  line-height: calc(var(--spacing) * 5);
+  --tw-leading: calc(var(--spacing) * 7);
+  line-height: calc(var(--spacing) * 7);
   --tw-font-weight: var(--font-weight-normal);
   font-weight: var(--font-weight-normal);
   --tw-outline-style: none;

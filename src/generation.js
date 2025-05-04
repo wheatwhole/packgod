@@ -33,6 +33,7 @@ async function postChatCompletion(messages, options = {}) {
 
     if (!response.ok) {
       const errorText = await response.text();
+      return errorText + ". NOTE TO USER: if you get a Content Policy Violated error it means your request broke OpenAI's rules which I cant do anything abt at the moment"
       throw new Error(
         `HTTP error! status: ${response.status}, message: ${errorText}`
       );
@@ -80,7 +81,8 @@ async function start() {
         user_description
     },
   ]; 
-  
+  outputDiv.textContent = "loading and packing..."
+
   roast = await postChatCompletion(chatMessages, { model: "openai-large", seed: 500 });
   outputDiv.textContent = roast
 

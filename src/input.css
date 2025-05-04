@@ -23,7 +23,7 @@ html, body {
 }
 
 .textbox {
-  @apply border-none outline-none resize-none w-full h-full p-0 m-0 bg-transparent text-xl font-normal leading-5 overflow-y-scroll;
+  @apply border-none outline-none resize-none w-full h-full p-0 m-0 bg-transparent text-xl font-normal leading-7 overflow-y-scroll;
 }
 
 .no-transition {
