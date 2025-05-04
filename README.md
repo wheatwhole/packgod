@@ -8,7 +8,7 @@ this is the best packgod roast generator youll find on the internet.
 - open source MIT License
 - FREE.
 ## planned additions
-- toggles to allow swearing slurs and racism
+- toggles to allow swearing slurs and MAYBE racism if you can make me
 - user powered AI training (basically you like or dislike the AI response)
 - donation links and socials
 - revamped context input boxes 
