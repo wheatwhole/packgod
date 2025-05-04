@@ -1,9 +1,9 @@
 # To access the site: 
 ### wheatwhole.github.io/packgod
 this is the best packgod roast generator youll find on the internet.
-i spent 4 hours training the AI to sound identical to packgod
-I made it work on all devices
-
+- works on all devices 
+- will humble any fools in the vicinity
+- high quality and trained AI
 
 ## planned additions
 - toggles to allow swearing slurs and racism
