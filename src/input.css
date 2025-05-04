@@ -163,8 +163,7 @@ p {
 }
 
 .button {
-  box-sizing: border-box;
-  font-size: 14.5px;
+  font-size: 18px;
   padding: 10px;
   background-color: #FFFFFF;
 	color: var(--accent);
@@ -175,14 +174,15 @@ p {
   border-radius: 0.2em;
   max-width: 300px;
   width: 200px;
-  height: 32px;
+  height: 50px;
   min-width: fit-content;
   transition: ease 0.2s;
-  margin: 5px;
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-top: 20px
 }
 
 .settingsnstuff {
