@@ -1,5 +1,5 @@
 # pls star this repository (optional)
-# To access the site: 
+# TO ACCESS THE SITE: 
 ### wheatwhole.github.io/packgod
 this is the best packgod roast generator youll find on the internet.
 - works on all devices 
