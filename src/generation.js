@@ -78,7 +78,7 @@ async function start() {
       role: "user",
       content:
         "I need you to generate a roast for someone. Here is how I would describe them: " +
-        user_description
+        user_description + " (No racism at all allowed)"
     },
   ]; 
   outputDiv.textContent = "loading and packing..."
