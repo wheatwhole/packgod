@@ -13,7 +13,7 @@
 async function postChatCompletion(messages, options = {}) {
   const url = "https://text.pollinations.ai/openai";
   const payload = {
-    model: options.model || "openai",
+    model: options.model || "deepseek-r1",
     messages: messages,
     seed: options.seed,
     private: options.private,
@@ -78,7 +78,7 @@ async function start() {
       role: "user",
       content:
         "I need you to generate a roast for someone. Here is how I would describe them: " +
-        user_description + " (No racism at all allowed)"
+        user_description + " (Absolutely NO racism, hate speech, ableism, etc at all allowed)"
     },
   ]; 
   outputDiv.textContent = "loading and packing..."
@@ -87,9 +87,10 @@ async function start() {
      outputDiv.textContent = "pls be patient..."
   }
   
-  setTimeout(delayedFunction, 4000); //im gonna be honest i got the delayed part off google AI
-
-  roast = await postChatCompletion(chatMessages, { model: "openai-large", seed: 500 });
+  setTimeout(delayedFunction, 1000); //im gonna be honest i got the delayed part off google AI
+  random_seed = Math.floor(Math.random()*500);
+  var roast = await postChatCompletion(chatMessages, { model: "openai-large", seed: random_seed });
+  roast = roast.split('---')[0]
   outputDiv.textContent = roast
 
 }
