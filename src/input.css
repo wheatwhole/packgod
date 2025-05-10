@@ -1,192 +1,122 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
 @import "tailwindcss";
-
 @theme {
-  --color-main: #40D672; 
-  --shadow-main: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  --color-main: #40d672;
+  --shadow-main: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 /* Update the html, body CSS rule */
-html, body {
-  width: 100%;
-  background: #FFFFFF;
+@font-face {
+  font-family: ggsans;
+  src: url('../resources/gg-sans-2/gg-sans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ggsans;
+  src: url('../resources/gg-sans-2/gg-sans-Normal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ggsans;
+  src: url('../resources/gg-sans-2/gg-sans-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ggsans;
+  src: url('../resources/gg-sans-2/gg-sans-Medium.ttf') format('truetype');
   font-weight: 500;
-  font-size: 16px;
-  font-family: 'Poppins', arial;
-  color: #1e272e;
+  font-style: normal;
+  font-display: swap;
+}
+html,
+body {
+  @apply w-full font-medium text-base text-[#1e272e] bg-white;
+  font-family: Poppins, sans-serif;
 }
 ::-webkit-scrollbar-track {
-  display: none;
-  border-radius: 10px;
+  @apply hidden rounded-[10px];
 }
+
+::-ms-scrollbar-track {
+  @apply rounded-[10px]
+}
+
 .textbox-wrapper {
   @apply shadow-main border-none w-1/1 max-w-9/10 lg:max-w-9/20 h-40 lg:h-[25rem] md:h-[20rem] p-7 leading-5 outline-none rounded-lg text-xl;
 }
-
 .textbox {
   @apply border-none outline-none resize-none w-full h-full p-0 m-0 bg-transparent text-xl font-normal leading-7 overflow-y-scroll;
 }
 
-.no-transition {
-  transition: none !important;
-  animation: none;
-}
-
-.shown {
-    animation: 0.7s ease-out 0s 1 slideInFromTop;
-}
-
-.allwrapper {
-  position: relative;
-  height: 100%;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 90%;
-  margin: auto auto
-}
-
-.text {
-  font-size: 16px;
-  width: 90%;
-  height: fit-content;
-}
-
-.title {
-  color: #4E3636;
-  text-align: left;
-  font-size: 2em;
-  width: 100%;
-}
-.boxed {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-.image-wrap {
-  width: 90%;
-  height: 20em;
-  border-radius: 0.5em;
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  margin: auto;
-}
-
-
-.left, .right {
-    display: block;
-    position: relative;
-    clear: both;
-}
-
-.roast {
-  position: relative;
-  flex: 1;
-  flex-direction: column;
-  display: flex;
-  right: 0%;
-  width: fit-content;
-}
-
-.left {
-  margin-left: 10px;
-  float: left;
-}
-
-.right {
-  margin-right: 10px;
-  float: right;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Montserrat:ital,wght@0,600;1,500&family=Poppins:wght@200;300;400;500&family=Raleway:wght@600;700&display=swap');
-
-ul {
-  list-style: none;
-}
-
-.shortened {
-  width: 40%;
-}
-
-p {
-  text-align: justify;
-  color: #1e272e;
-}
-
-.desc {
-  color: #4E3636;
-  font-weight: 400;
-  font-size: 0.95em;
-  
-}
-
-.light {
-  opacity: 0.7;
-}
-.center {
-  display: block;
-  margin: auto;
-}
-
-
-
-.absolute {
-  position: absolute;
-}
-
-.fixedbuttons {
-  bottom: 10px;
-  font-weight: 500;
-  width: fit-content;
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
-
-.suggest {
-  background-color: rgba(255, 255, 255, .5);  
-  backdrop-filter: blur(2px);
-  transition: ease 0.2s all;
-  float: right;
-  margin-left: 10px;
-  border-radius: 7px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  color: #333333;
-}
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Montserrat:ital,wght@0,600;1,500&family=Poppins:wght@200;300;400;500&family=Raleway:wght@600;700&display=swap");
 
 .seafarer-box-shadow {
-   box-shadow: rgba(93, 140, 192, 0.25) 0px 3px 2px, rgba(93, 140, 192, 0.24) 0px 7px 13px -3px, rgba(33, 42, 62, 0.2) 0px -3px 0px inset;
- /* old seafarer box shadow: */
- /* box-shadow: 0px 3px 2px rgba(93, 140, 192, 0.25), rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
- /* filter: drop-shadow(0px 3px 3px rgba(93, 140, 192, 0.25)); */
+  box-shadow: rgba(93, 140, 192, 0.25) 0px 3px 2px, rgba(93, 140, 192, 0.24) 0px 7px 13px -3px, rgba(33, 42, 62, 0.2) 0px -3px 0px inset;
+/* old seafarer box shadow: */
+/* box-shadow: 0px 3px 2px rgba(93, 140, 192, 0.25), rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+/* filter: drop-shadow(0px 3px 3px rgba(93, 140, 192, 0.25)); */
 }
 
 .button {
-  font-size: 18px;
-  padding: 10px;
-  background-color: #FFFFFF;
-	color: var(--accent);
-	border: none;
-	font-family: 'Plus Jakarta Sans', sans-serif;
-	cursor: pointer;
-	outline: inherit;
-  border-radius: 0.2em;
-  max-width: 300px;
-  width: 200px;
-  height: 50px;
-  min-width: fit-content;
-  transition: ease 0.2s;
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-top: 20px
+  @apply text-lg bg-white text-[color:var(--accent)] cursor-pointer max-w-[300px] w-[200px] h-[50px] min-w-fit transition-[ease] duration-[0.2s] font-bold flex justify-center items-center ml-auto mt-5 p-2.5 rounded-[0.2em] border-[none];
+  font-family: "Plus Jakarta Sans", sans-serif;
+  outline: inherit;
 }
 
-.settingsnstuff {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+  border-radius: 20px;
+  background: #40d672;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
 }
