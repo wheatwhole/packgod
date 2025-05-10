@@ -91,12 +91,12 @@ body {
   left: 50%;
   bottom: 30px;
   font-size: 17px;
-  border-radius: 20px;
+  border-radius: 15px;
   background: #40d672;
 }
 
 #snackbar.show {
-  visibility: visible;
+  visibility: visible !important;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
