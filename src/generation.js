@@ -89,7 +89,7 @@ async function start() {
   
   setTimeout(delayedFunction, 1000); //im gonna be honest i got the delayed part off google AI
   random_seed = Math.floor(Math.random()*500);
-  var roast = await postChatCompletion(chatMessages, { model: "openai-large", seed: random_seed });
+  var roast = await postChatCompletion(chatMessages, { model: "deepseek-reasoning", seed: random_seed });
   roast = roast.split('---')[0]
   outputDiv.textContent = roast
 
