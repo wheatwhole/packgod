@@ -9,45 +9,78 @@
    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
    <link href="output.css" rel="stylesheet" type="text/css" />
    <title>packgod</title>
 </head>
 
-<body class="no-transition">
+<body class="h-[100%] w-[100%]">
    <div id="snackbar" class="snackbar">copied!</div>
 
-   <div class="mx-auto gap-5 w-1/1 mt-10" id="allwrapper">
-      <h1 class="text-5xl text-center font-bold rounded-lg bg-amber-500">packgod humbler 3000</h1>
-     
-      <div class="rounded-lg w-80 overflow-hidden h-70 shadow-main mx-auto mt-10" id="roast-image-wrap">
-         <img src="resources/IMG_3534.jpeg" class="shadow-main w-80 h-auto" id="roast.png" />
+   <div class="gap-5 flex flex-col items-center justify-center h-[100%] w-[100%] absolute overflow-scroll" id="allwrapper">
+      <h1 class="text-5xl font-bold rounded-lg ">packgod humbler 3000</h1>
+      <div class="rounded-lg w-40 overflow-hidden h-40 shadow-main" id="roast-image-wrap">
+         <img src="resources/IMG_3534.jpeg" class="shadow-main w-80" id="roast.png" />
       </div>
-      <div class="mx-auto text-center"><!-- lazy ahh code --><p class="p-7">⚠️ The AI is currently producing no results. I'm actively working on fixing this. ⚠️ <b>UPDATE: AI is now fixed</b></p> 
-      </div>
-      <div role="button" class="seafarer-box-shadow button mx-auto hover:w-" tabindex="1" style="cursor: pointer"
-         onclick="start()">
-         click to generate
-      </div>
-      <div id="generator" class="justify-center w-1/1 gap-5 mx-auto flex flex-row lg:flex-nowrap flex-wrap mt-5 mb-5">
-         <div id="description-wrapper" class="shadow-main border-none w-1/1 max-w-9/10 lg:max-w-9/20 h-40 lg:h-[25rem] md:h-[20rem] p-7 leading-5 outline-none rounded-lg text-xl">
+      <!-- old generator wrapper styles: justify-center w-1/1 gap-5  flex flex-row lg:flex-nowrap flex-wrap mt-5 mb-5 -->
+      <div id="generator" class=" w-400 gap-5 flex flex-col mt-5 mb-5 justify-center items-center ">
+         <!-- Old Description: <div id="description-wrapper" class="shadow-main border-none w-1/1 max-w-9/10 lg:max-w-9/20 h-40 lg:h-[25rem] md:h-[20rem] p-7 leading-5 outline-none rounded-lg text-xl">
             <textarea placeholder="Describe your opponent in as much detail as possible" id="user_description"
-               class="border-none outline-none resize-none w-full h-full p-0 m-0 bg-transparent text-xl font-normal leading-7 overflow-y-scroll;"></textarea>
-         </div>
-         <div id="result-wrapper" class="shadow-main border-none w-1/1 max-w-9/10 lg:max-w-9/20 h-40 lg:h-[25rem] md:h-[20rem] md:w-9/11 p-7 leading-5 overflow-x-hidden overflow-y-scroll outline-none rounded-lg text-xl" id="result-wrapper">
+               class="border-none outline-none resize-none w-full h-fit p-0 m-0 bg-transparent text-xl font-normal leading-7"></textarea>
+         </div>-->
+
+         <!-- Old Result: <div id="result-wrapper" class="shadow-main border-none w-1/1 max-w-9/10 lg:max-w-9/20 h-40 lg:h-[25rem] md:h-[20rem] md:w-9/11 p-7 leading-5 overflow-x-hidden overflow-y-scroll outline-none rounded-lg text-xl" id="result-wrapper">
             <p id="starter "><b>Result:</b></p>
             <p id="output" class="mt-3 border-none outline-none resize-none w-full m-0 bg-transparent text-xl font-normal leading-7">
                gurt: yo
             </p>
+         </div> -->
+
+         <div id="description-wrapper" tabindex="1"
+            class="group shadow-main border-none w-1/1 max-w-9/10 lg:max-w-9/20 h-50 p-5 leading-5 outline-none rounded-lg has-focus:shadow-deep  ">
+            <textarea placeholder="Describe your opponent in as much detail as possible " id="user_description"
+               tabindex="1"
+               class="border-none outline-none resize-none w-full bg-transparent font-normal h-[100%] eading-7 align-top text-lg overflow-y-auto "></textarea>
          </div>
-         <button class="shadow-main p-2.5 rounded-xl h-fit w-fit hover:*:w-11 hover:*:h-11 ease-in-out duration-100" id="copy" onclick="copy()">
-            <svg data-slot="icon" fill="none" stroke-width="1.5" class="w-9 h-9 ease-in-out duration-300" stroke="currentColor"
-               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-               <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184">
-               </path>
-            </svg>
-         </button>
+
+         <!-- old action buttons:
+   
+         <div id="mini-buttons" class="flex flex-col gap-3">
+            <button class="shadow-main p-2.5 rounded-xl h-fit w-fit hover:*:w-11 hover:*:h-11 ease-in-out duration-100" id="copy" onclick="copy()">
+               <svg data-slot="icon" fill="none" stroke-width="1.5" class="w-9 h-9 ease-in-out duration-300" stroke="currentColor"
+                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184">
+                  </path>
+               </svg>
+            </button>
+         </div>
+
+         -->
+      <div id="action-buttons" class="flex flex-row w-fit  gap-5 items-center">
+         <button
+            class="shadow-lifted text-dark bg-main button  hover:bg-dark hover:text-light hover:shadow-lifted-alt ease-in transition-all duration-100"
+            tabindex="1" style="cursor: pointer" onclick="start()">
+            start
+      </button>
+         <button class="button shadow-lifted align-middle rounded-xl h-fit w-fit hover:transform-[scale(1.2,1.2)] transition-all ease-in-out duration-100" id="copy" onclick="copy()">
+               <svg data-slot="icon" fill="none" stroke-width="1.5" class="w-7 h-7" stroke="currentColor"
+                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                     d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184">
+                  </path>
+               </svg>
+            </button>
       </div>
+
+      <div id="result-wrapper" class=" group shadow-main border-none w-1/1 max-w-9/10 lg:max-w-9/20 p-5 outline-none rounded-lg text-lg" id="result-wrapper">
+            <p id="output" class=" font-bold border-none outline-none resize-none w-full bg-transparent text-xl overflow-y-auto overlfow-x-hidden h-50">
+               😂✌️
+            </p>
+         </div> 
+      </div>
+
    </div>
 
    <style lang="postcss" scoped></style>
