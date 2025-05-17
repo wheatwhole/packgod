@@ -14,18 +14,13 @@ var outputDiv,
     outputDiv = null;
   }
 
+
+  
 function copy() {
  
   
     navigator.clipboard.writeText(outputDiv.innerHTML);
 
-    var x = document.getElementById("snackbar")
-
-    // Add the "show" class to DIV
-    x.className = "show";
-
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
   }
 
 // document.querySelectorAll("textarea").forEach(function(textarea) {

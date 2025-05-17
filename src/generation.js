@@ -91,6 +91,10 @@ async function start() {
   random_seed = Math.floor(Math.random()*500);
   var roast = await postChatCompletion(chatMessages, { model: "deepseek-reasoning", seed: random_seed });
   roast = roast.split('---')[0]
+  var thinkerrorcheck = roast.includes("<think>")
+  if(thinkerrorcheck) {
+    roast = "ERROR: AI included reasoning text. As of now, I dont know how to prevent this but I'm working on it. For now, just click the start button again."
+  }
   outputDiv.textContent = roast
 
 }

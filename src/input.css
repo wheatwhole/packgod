@@ -74,8 +74,7 @@
     @apply border-none outline-none resize-none w-full h-full p-0 m-0 bg-transparent text-xl font-normal leading-7 overflow-y-scroll;
   }
   .button {
-    @apply text-lg bg-white text-[color:var(--accent)] cursor-pointer max-w-[300px] w-[200px] h-[50px] min-w-fit transition-[ease] duration-[0.2s] font-bold flex justify-center items-center p-2.5 rounded-2xl border-[none];
-    font-family: "Plus Jakarta Sans", sans-serif;
+    @apply text-lg bg-white text-[color:var(--accent)] cursor-pointer max-w-[300px] w-[200px] h-10 min-w-fit font-bold flex justify-center items-center p-2.5 rounded-2xl border-[none];
     outline: inherit;
   }
 }
@@ -101,6 +100,11 @@
   color: white;
   background-color: #FFD63a
 }
+
+.ease-main {
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1) 0ms;
+}
+/*
 #snackbar {
   visibility: hidden;
   min-width: 250px;
@@ -113,12 +117,12 @@
   position: fixed;
   z-index: 1;
   left: 50%;
-  bottom: 30px;
+  top: 30px;
   font-size: 17px;
   border-radius: 15px;
   background: #40d672;
 }
-
+*/
 #snackbar.show {
   visibility: visible !important;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
