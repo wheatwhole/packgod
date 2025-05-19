@@ -5,11 +5,12 @@ this is the best packgod roast generator youll find on the internet.
 - works on all devices 
 - will humble any fools in the vicinity
 - high quality and trained AI
-- open source MIT License
+- open source MIT License, please just credit me when you copy or fork.
 - FREE.
-## planned additions
-- toggles to allow swearing slurs and MAYBE racism if you can make me
-- user powered AI training (basically you like or dislike the AI response)
+## planned/finished additions
+- AI is moved to my portfolio website repository (wheatwhole.github.io)
+- donations
+- user powered AI training 
 - donation links and socials
-- revamped context input boxes
-- revamping the prompt for AI to actually listen and not be racist
+- revamped input, allowing support for image input, tags and preferences
+- revamping the prompt for AI to actually listen and not be racist (DONE)
