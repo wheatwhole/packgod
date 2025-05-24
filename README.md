@@ -9,7 +9,6 @@ this is the best packgod roast generator youll find on the internet.
 - FREE.
 ## planned/finished additions
 - AI is moved to my portfolio website repository (wheatwhole.github.io)
-- donations
 - user powered AI training 
 - donation links and socials
 - revamped input, allowing support for image input, tags and preferences
