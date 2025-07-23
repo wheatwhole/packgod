@@ -59,14 +59,6 @@
     @apply w-full font-medium text-base text-dark bg-light;
     font-family: "IBM Plex Mono", monospace;
   }
-  ::-webkit-scrollbar-track {
-    @apply hidden rounded-[10px];
-  }
-
-  ::-ms-scrollbar-track {
-    @apply rounded-[10px]
-  }
-
   .textbox-wrapper {
     @apply shadow-main border-none w-1/1 max-w-9/10 lg:max-w-9/20 h-40 lg:h-[25rem] md:h-[20rem] p-7 leading-5 outline-none rounded-lg text-xl;
   }
